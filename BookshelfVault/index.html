@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kim's Library</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="library.css" />
+  </head>
+  <body class="bg-dark text-white">
+    <nav class="navbar navbar-expand-lg bg-primary p-3">
+      <div class="container">
+        <h5 class="navbar-brand text-light fw-bold">BookshelfVault</h5>
+        <button id="newBookBtn" class="btn btn-light">Add Book</button>
+      </div>
+    </nav>
+
+    <main class="container my-4">
+      <div id="library" class="row row-cols-1 row-cols-md-3 g-4"></div>
+    </main>
+
+    <dialog id="bookFormDialog" class="p-4 rounded border-0 shadow-lg">
+      <form id="bookForm" class="row g-4" novalidate>
+        <h2 class="col-12 text-center">Add Book</h2>
+        <div class="col-12">
+          <label for="title" class="form-label">Title:</label>
+          <input type="text" id="title" class="form-control" required />
+          <div id="titleError" class="invalid-feedback"></div>
+        </div>
+        <div class="col-12">
+          <label for="author" class="form-label">Author:</label>
+          <input type="text" id="author" class="form-control" required />
+          <div id="authorError" class="invalid-feedback"></div>
+        </div>
+        <div class="col-12">
+          <label for="pages" class="form-label">Pages:</label>
+          <input type="number" id="pages" class="form-control" min="1" required />
+          <div id="pagesError" class="invalid-feedback"></div>
+        </div>
+        <div class="col-12">
+          <label for="read" class="form-label">Read:</label>
+          <input type="checkbox" id="read" name="read" />
+        </div>
+
+        <div class="col-12 d-flex justify-content-around">
+          <button class="btn btn-primary">Add Book</button>
+          <button id="closeForm" class="btn btn-danger">Close</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="library.Js"></script>
+  </body>
+</html>
